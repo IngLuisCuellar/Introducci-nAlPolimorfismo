@@ -5,6 +5,8 @@ public class Funcionario {
 	private String documento;
 	private double salario;
 	
+	private int tipo;
+	
 	//constructor es un método del mismo tipo de retorno de la clase
 	public Funcionario() {
 		
@@ -27,6 +29,27 @@ public class Funcionario {
 	}
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+	
+	public double getBonificacion() {
+		//Tipo define si es gerente o funcionario
+		//0 es funcionario
+		if (this.tipo == 0) {
+			return this.salario*0.1;
+		} else if (this.tipo == 1) {
+			return this.salario;
+		} else {
+			return 0;
+		}
+	
+	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
 	}
 	
 }

@@ -5,8 +5,18 @@ public class testFuncionario {
 		
 		luis.setNombre("Luis Cuellar");
 		luis.setDocumento("4A5A4D8523");
-		luis.setSalario(198203);
+		luis.setSalario(1000);
+		luis.setTipo(0);
 		
-		System.out.println(luis.getNombre() + luis.getDocumento() + luis.getSalario());
+		System.out.println(luis.getNombre());
+		
+		System.out.println(luis.getBonificacion());
+		System.out.println(luis.getSalario());
+		
+		Funcionario gerente = new Funcionario();
+		gerente.setSalario(5000);
+		gerente.setTipo(1);
+		
+		System.out.println(gerente.getBonificacion());
 	}
 }
