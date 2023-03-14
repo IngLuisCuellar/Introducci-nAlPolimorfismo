@@ -11,8 +11,9 @@ public class Gerente extends Funcionario {
 	return clave == "Contraseña";
 	}
 	
+	//Sobre-escritura de método
 	public double getBonificacion() {
 		//Super permite accesar a los metodos de la clase padre
-		return super.getSalario();
+		return super.getSalario() + super.getBonificacion();
 	}
 }
