@@ -13,10 +13,5 @@ public class testFuncionario {
 		System.out.println(luis.getBonificacion());
 		System.out.println(luis.getSalario());
 		
-		Funcionario gerente = new Funcionario();
-		gerente.setSalario(5000);
-		gerente.setTipo(1);
-		
-		System.out.println(gerente.getBonificacion());
 	}
 }
