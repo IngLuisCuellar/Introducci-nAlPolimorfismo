@@ -8,9 +8,15 @@ public class TestControlBonificacion {
 		Gerente Sam = new Gerente();
 		Sam.setSalario(5000);
 		
+		Contador contador = new Contador();
+		contador.setSalario(3000);
+		
 		ControlBonificación controlBonificación = new ControlBonificación();
 		
 		controlBonificación.registrarSalario(Luis);
 		controlBonificación.registrarSalario(Sam);
+		controlBonificación.registrarSalario(contador);
+		
+		
 	}
 }
