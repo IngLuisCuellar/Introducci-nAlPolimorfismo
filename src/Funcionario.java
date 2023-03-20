@@ -1,5 +1,5 @@
-
-public class Funcionario {
+//Clase abstracta sin representación física
+public abstract class Funcionario {
 	
 	private String nombre;
 	private String documento;
@@ -31,10 +31,9 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public double getBonificacion() {
-		return this.salario *0.05;
-	
-	}
+	//Dejamos el método para ser usado por las clases hijas
+	//Siempre debe ser implementado
+	public abstract double getBonificacion();
 
 	public int getTipo() {
 		return tipo;

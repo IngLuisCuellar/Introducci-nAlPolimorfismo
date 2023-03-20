@@ -5,10 +5,10 @@
  * Titular 
  */
 
-class Cuenta {
+public abstract class Cuenta {
 	
-	private double saldo;
-	private int agencia;
+	protected double saldo; //Permite que sea usado solo por las clases hijas
+	private int agencia = 1;
 	private int numero;
 	private Cliente titular = new Cliente(); //Se referencia con el objeto tipo Cliente
 	
@@ -32,11 +32,7 @@ class Cuenta {
 	}
 	
 	//Void --> No retorna valor
-	public void depositar(double saldo){//El dinero que se va agregar a la cuenta
-		this.saldo += saldo;
-		// This.saldo es el saldo de este objeto (Cuenta), por otro lado, saldo es el parámetro
-		//que le ingresa
-	}
+	public abstract void depositar(double saldo);
 	
 	
 	// Retorna true or false
