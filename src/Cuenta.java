@@ -15,9 +15,6 @@ class Cuenta {
 	private static int total = 0; //Static hace que la variable sea de la clase, mas no de la instancia
 	//Este constructor hace que se deba dar el atributo agencia al hacer una new Cuenta
 	
-	public Cuenta() {
-		
-	}
 	
 	public static int getTotal() {
 		return total;
@@ -50,11 +47,21 @@ class Cuenta {
 		}
 		return false;
 	}
+	
+	public boolean saca(double valor) {
+		if(this.saldo >= valor) {
+			this.saldo -= valor;
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 								//Objeto tipo cuenta
-	public boolean transferir(double saldo, Cuenta cuenta) {
-		if (this.saldo >= saldo) {
-			this.saldo -= saldo;
-			cuenta.depositar(saldo);
+	public boolean transferir(double valor, Cuenta cuenta) {
+		if (this.saldo >= valor) {
+			this.saca(valor);
+			cuenta.depositar(valor);
 			return true;
 		}
 		return false;
