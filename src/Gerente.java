@@ -1,15 +1,6 @@
 //Herencia
-public class Gerente extends Funcionario {
+public class Gerente extends FuncionarioAutenticable {
 	
-	private String clave;
-	
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-	
-	public boolean iniciarSesion(String clave) {
-	return clave == "Contraseña";
-	}
 	
 	//Sobre-escritura de método
 	public double getBonificacion() {
