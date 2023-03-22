@@ -1,5 +1,5 @@
 
-public class CuentaCorriente extends Cuenta {
+public class CuentaCorriente extends Cuenta implements Tributacion {
 	public CuentaCorriente(int agencia) { //Fue necesario hacer un contructor aquí
 		super(agencia); //Con el parámetro de nuestra clase superior, satisfaciendo las reglas de la clase superior
 	}
@@ -14,5 +14,10 @@ public class CuentaCorriente extends Cuenta {
 	public void depositar(double saldo) {
 		this.saldo += saldo;
 		
+	}
+
+	@Override
+	public double getValorImpuesto() {
+		return super.saldo * 0.01;
 	}
 }
