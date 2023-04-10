@@ -44,13 +44,11 @@ public abstract class Cuenta {
 		return false;
 	}
 	
-	public boolean saca(double valor) {
-		if(this.saldo >= valor) {
-			this.saldo -= valor;
-			return true;
-		} else {
-			return false;
+	public void saca(double valor) {
+		if (this.saldo < valor) {
+			throw new SinSaldoException("No tienes saldo suficiente");
 		}
+		this.saldo -= valor;
 	}
 	
 								//Objeto tipo cuenta
